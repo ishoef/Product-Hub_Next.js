@@ -3,6 +3,7 @@
 import React from "react";
 import { useParams } from "next/navigation";
 import { Star } from "lucide-react";
+import { MdKeyboardBackspace } from "react-icons/md";
 
 export default function Details() {
   const { id } = useParams();
@@ -479,9 +480,12 @@ export default function Details() {
 
   return (
     <section className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-100">
-      <div className="max-w-5xl mx-auto mb-8 text-blue-300 hover:text-blue-400 ">
-        <p>
-          <IoMdArrowRoundBack />
+      <div className="max-w-5xl mx-auto mb-5 text-blue-300 hover:text-blue-400 ">
+        <p
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={() => window.history.back()}
+        >
+          <MdKeyboardBackspace />
           Back to Products
         </p>
       </div>
