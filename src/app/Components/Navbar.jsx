@@ -9,7 +9,7 @@ export default function Navbar() {
       <nav className="flex justify-between items-center max-w-7xl mx-auto px-6 py-4 text-white">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold tracking-wide">
-          ProductHub
+          Product<span className="text-blue-400">Hub</span>
         </Link>
 
         {/* Nav Links */}

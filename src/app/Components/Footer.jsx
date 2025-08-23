@@ -76,10 +76,24 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()}{" "}
-        <span className="text-white font-semibold">ProductHub</span>. All rights
-        reserved.
+      <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+        <p className="mb-2">
+          &copy; {new Date().getFullYear()}{" "}
+          <span className="text-white font-semibold">ProductHub</span>. All
+          rights reserved.
+        </p>
+        <p>
+          Built with <span className="text-red-500">❤️</span> by{" "}
+          <a
+            href="https://ismailnayef.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 hover:text-blue-500 underline transition-colors"
+          >
+            Ismail Nayef
+          </a>
+          .
+        </p>
       </div>
     </footer>
   );
