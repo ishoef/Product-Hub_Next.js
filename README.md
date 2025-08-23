@@ -1,46 +1,65 @@
-Task Overview
-Build a simple application using Next.js 15 (App Router). The app will have public and protected pages with basic authentication using NextAuth.js. Users can view a landing page, visit product details, and after logging in, access a protected product management page to add new products.
+# 🛍️ Next.js 15 Product Management App  
 
+A simple **Next.js 15 (App Router)** application with **NextAuth.js authentication**, featuring public and protected pages. Users can browse products, view details, and (after logging in) add new products via a protected dashboard.  
 
+---
 
-Core Features to Build
+## 🚀 Features  
 
-1. Landing Page (/)
-Must include 4 sections: Navbar, Hero, Product Highlights, Footer
-Navigation to login and products
-No authentication required
-2. Login with NextAuth (/login)
-Implement social login (e.g.,Google) or credential login using NextAuth
-Redirect to /products after successful login
-3. Product List Page (/products)
-Publicly accessible
-Fetch and show a list of products from a mock backend or file
-Each product will include: name, description, price, and a details button
-4. Product Details Page (/products/[id])
-Show full details of a single product
-Publicly accessible
-5. Protected Page: Add Product (/dashboard/add-product)
-Only accessible when logged in
-A form to add a new product and store the product data in database
-Redirect unauthenticated users to login
+### Public Pages  
+- **Landing Page (/**)  
+  - Includes Navbar, Hero, Product Highlights, and Footer  
+  - Navigation links to Login and Products  
 
+- **Login (/login)**  
+  - Authentication with **NextAuth.js** (Google or Credentials)  
+  - Redirects to `/products` after successful login  
 
-Optional Enhancements
-Show a loading spinner when submitting forms
-Display toast message on successful product add
-Add a theme toggle (light/dark)
+- **Products List (/products)**  
+  - Fetch and display product list from mock backend  
+  - Each product shows: name, description, price, and details button  
 
+- **Product Details (/products/[id])**  
+  - Public details page for each product  
 
-Technologies to Use
-Next.js 15 (App Router)
-NextAuth.js for authentication
-Use Route Handlers (/api) for backend, or simple Express.js server for fetching or creating data
+### Protected Pages  
+- **Add Product (/dashboard/add-product)**  
+  - Only accessible when logged in  
+  - Form to add a new product (stored in database or API route)  
+  - Redirects unauthenticated users to `/login`  
 
+---
 
-Submission Requirements
-GitHub Repository link
-Live Site link (e.g., Vercel)
-README.md including:
-Short project description
-Setup & installation instructions
-Route Summary
+## ✨ Optional Enhancements  
+- Loading spinner when submitting forms  
+- Toast messages on successful product add  
+- Light/Dark mode toggle  
+
+---
+
+## 🛠️ Tech Stack  
+- [Next.js 15 (App Router)](https://nextjs.org/)  
+- [NextAuth.js](https://next-auth.js.org/) for authentication  
+- Route Handlers (`/api`) for backend  
+- Mock database (JSON/file-based) or Express server  
+
+---
+
+## 📂 Routes Summary  
+
+| Route | Type | Description |
+|-------|------|-------------|
+| `/` | Public | Landing Page with Hero + Product Highlights |
+| `/login` | Public | Login with NextAuth (Google / Credentials) |
+| `/products` | Public | Product List |
+| `/products/[id]` | Public | Product Details |
+| `/dashboard/add-product` | Protected | Add Product (requires login) |
+
+---
+
+## ⚡ Getting Started  
+
+### 🔹 Clone the repository  
+```bash
+git clone https://github.com/your-username/nextjs-product-app.git
+cd nextjs-product-app
