@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Task Overview
+Build a simple application using Next.js 15 (App Router). The app will have public and protected pages with basic authentication using NextAuth.js. Users can view a landing page, visit product details, and after logging in, access a protected product management page to add new products.
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Core Features to Build
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Landing Page (/)
+Must include 4 sections: Navbar, Hero, Product Highlights, Footer
+Navigation to login and products
+No authentication required
+2. Login with NextAuth (/login)
+Implement social login (e.g.,Google) or credential login using NextAuth
+Redirect to /products after successful login
+3. Product List Page (/products)
+Publicly accessible
+Fetch and show a list of products from a mock backend or file
+Each product will include: name, description, price, and a details button
+4. Product Details Page (/products/[id])
+Show full details of a single product
+Publicly accessible
+5. Protected Page: Add Product (/dashboard/add-product)
+Only accessible when logged in
+A form to add a new product and store the product data in database
+Redirect unauthenticated users to login
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Optional Enhancements
+Show a loading spinner when submitting forms
+Display toast message on successful product add
+Add a theme toggle (light/dark)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Technologies to Use
+Next.js 15 (App Router)
+NextAuth.js for authentication
+Use Route Handlers (/api) for backend, or simple Express.js server for fetching or creating data
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Submission Requirements
+GitHub Repository link
+Live Site link (e.g., Vercel)
+README.md including:
+Short project description
+Setup & installation instructions
+Route Summary
