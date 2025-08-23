@@ -479,137 +479,147 @@ export default function Details() {
 
   return (
     <section className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-100">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
-        {/* Product Image Gallery */}
-        <div>
-          <img
-            src={product.image}
-            alt={product.name}
-            className="rounded-xl shadow-lg w-full h-96 object-cover"
-          />
-          <div className="flex gap-3 mt-4">
-            {product.images.map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt={`${product.name}-${i}`}
-                className="w-20 h-20 rounded-lg border border-gray-700 object-cover cursor-pointer hover:scale-105 transition"
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Product Info */}
-        <div className="flex flex-col">
-          <h1 className="text-3xl font-bold text-white">{product.name}</h1>
-          <p className="mt-2 text-gray-400">{product.description}</p>
-
-          {/* Price & Stock */}
-          <div className="mt-4 flex items-center gap-6">
-            <p className="text-2xl font-semibold text-blue-400">
-              ${product.price}
-            </p>
-            <p className="text-sm">
-              Stock:{" "}
-              <span
-                className={`${
-                  product.stock > 50 ? "text-green-400" : "text-red-400"
-                } font-medium`}
-              >
-                {product.stock} left
-              </span>
-            </p>
-          </div>
-
-          {/* Ratings */}
-          <div className="flex items-center mt-3 text-yellow-400">
-            {Array.from({ length: 5 }, (_, i) => (
-              <Star
-                key={i}
-                size={20}
-                fill={i < Math.floor(product.rating) ? "currentColor" : "none"}
-                stroke="currentColor"
-              />
-            ))}
-            <span className="ml-2 text-gray-300 text-sm">
-              {product.rating.toFixed(1)} / 5
-            </span>
-          </div>
-
-          {/* Features */}
-          {product.features && (
-            <div className="mt-6">
-              <h2 className="text-xl font-semibold text-white">Features</h2>
-              <ul className="mt-2 space-y-1 list-disc list-inside text-gray-300">
-                {product.features.map((feature, i) => (
-                  <li key={i}>{feature}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* Specs */}
-          {product.specs && (
-            <div className="mt-6">
-              <h2 className="text-xl font-semibold text-white">
-                Specifications
-              </h2>
-              <div className="grid grid-cols-2 gap-3 mt-2 text-gray-300">
-                {Object.entries(product.specs).map(([key, value], i) => (
-                  <div
-                    key={i}
-                    className="p-2 bg-gray-800 rounded-lg shadow-sm border border-gray-700"
-                  >
-                    <span className="font-medium capitalize">{key}:</span>{" "}
-                    {value}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Add to Cart */}
-          <button className="mt-6 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg shadow-md transition-colors">
-            Add to Cart
-          </button>
-        </div>
+      <div className="max-w-5xl mx-auto mb-8 text-blue-300 hover:text-blue-400 ">
+        <p>
+          <IoMdArrowRoundBack />
+          Back to Products
+        </p>
       </div>
+      <div className="border border-gray-700 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-xl shadow-lg p-8 max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+          {/* Product Image Gallery */}
+          <div>
+            <img
+              src={product.image}
+              alt={product.name}
+              className="rounded-xl shadow-lg w-full h-96 object-cover"
+            />
+            <div className="flex gap-3 mt-4">
+              {product.images.map((img, i) => (
+                <img
+                  key={i}
+                  src={img}
+                  alt={`${product.name}-${i}`}
+                  className="w-20 h-20 rounded-lg border border-gray-700 object-cover cursor-pointer hover:scale-105 transition"
+                />
+              ))}
+            </div>
+          </div>
 
-      {/* Reviews */}
-      {product.reviews && (
-        <div className="max-w-5xl mx-auto px-6 mt-16">
-          <h2 className="text-2xl font-bold mb-4 text-white">
-            Customer Reviews
-          </h2>
-          <div className="space-y-4">
-            {product.reviews.map((review, i) => (
-              <div
-                key={i}
-                className="p-4 bg-gray-800 rounded-lg shadow-md border border-gray-700"
-              >
-                <div className="flex items-center justify-between">
-                  <p className="font-semibold text-white">{review.user}</p>
-                  <div className="flex text-yellow-400">
-                    {Array.from({ length: 5 }, (_, star) => (
-                      <Star
-                        key={star}
-                        size={16}
-                        fill={
-                          star < Math.floor(review.rating)
-                            ? "currentColor"
-                            : "none"
-                        }
-                        stroke="currentColor"
-                      />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-300 mt-1">“{review.comment}”</p>
+          {/* Product Info */}
+          <div className="flex flex-col">
+            <h1 className="text-3xl font-bold text-white">{product.name}</h1>
+            <p className="mt-2 text-gray-400">{product.description}</p>
+
+            {/* Price & Stock */}
+            <div className="mt-4 flex items-center gap-6">
+              <p className="text-2xl font-semibold text-blue-400">
+                ${product.price}
+              </p>
+              <p className="text-sm">
+                Stock:{" "}
+                <span
+                  className={`${
+                    product.stock > 50 ? "text-green-400" : "text-red-400"
+                  } font-medium`}
+                >
+                  {product.stock} left
+                </span>
+              </p>
+            </div>
+
+            {/* Ratings */}
+            <div className="flex items-center mt-3 text-yellow-400">
+              {Array.from({ length: 5 }, (_, i) => (
+                <Star
+                  key={i}
+                  size={20}
+                  fill={
+                    i < Math.floor(product.rating) ? "currentColor" : "none"
+                  }
+                  stroke="currentColor"
+                />
+              ))}
+              <span className="ml-2 text-gray-300 text-sm">
+                {product.rating.toFixed(1)} / 5
+              </span>
+            </div>
+
+            {/* Features */}
+            {product.features && (
+              <div className="mt-6">
+                <h2 className="text-xl font-semibold text-white">Features</h2>
+                <ul className="mt-2 space-y-1 list-disc list-inside text-gray-300">
+                  {product.features.map((feature, i) => (
+                    <li key={i}>{feature}</li>
+                  ))}
+                </ul>
               </div>
-            ))}
+            )}
+
+            {/* Specs */}
+            {product.specs && (
+              <div className="mt-6">
+                <h2 className="text-xl font-semibold text-white">
+                  Specifications
+                </h2>
+                <div className="grid grid-cols-2 gap-3 mt-2 text-gray-300">
+                  {Object.entries(product.specs).map(([key, value], i) => (
+                    <div
+                      key={i}
+                      className="p-2 bg-gray-800 rounded-lg shadow-sm border border-gray-700"
+                    >
+                      <span className="font-medium capitalize">{key}:</span>{" "}
+                      {value}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Add to Cart */}
+            <button className="mt-6 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg shadow-md transition-colors">
+              Add to Cart
+            </button>
           </div>
         </div>
-      )}
+
+        {/* Reviews */}
+        {product.reviews && (
+          <div className="max-w-5xl mx-auto px-6 mt-16">
+            <h2 className="text-2xl font-bold mb-4 text-white">
+              Customer Reviews
+            </h2>
+            <div className="space-y-4">
+              {product.reviews.map((review, i) => (
+                <div
+                  key={i}
+                  className="p-4 bg-gray-800 rounded-lg shadow-md border border-gray-700"
+                >
+                  <div className="flex items-center justify-between">
+                    <p className="font-semibold text-white">{review.user}</p>
+                    <div className="flex text-yellow-400">
+                      {Array.from({ length: 5 }, (_, star) => (
+                        <Star
+                          key={star}
+                          size={16}
+                          fill={
+                            star < Math.floor(review.rating)
+                              ? "currentColor"
+                              : "none"
+                          }
+                          stroke="currentColor"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mt-1">“{review.comment}”</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
     </section>
   );
 }
