@@ -12,6 +12,31 @@ const allProducts = [
     price: 1200,
     image:
       "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80",
+    category: "Laptops",
+    brand: "TechBrand",
+    stock: 25,
+    rating: 4.7,
+    features: [
+      "Intel i7 11th Gen",
+      "16GB RAM",
+      "512GB SSD",
+      "15.6-inch Retina Display",
+    ],
+    specs: {
+      processor: "Intel Core i7",
+      ram: "16GB DDR4",
+      storage: "512GB SSD",
+      display: "15.6-inch 4K Retina",
+      battery: "10 hours",
+    },
+    reviews: [
+      { user: "Ali", comment: "Very fast and lightweight.", rating: 5 },
+      { user: "Fatima", comment: "Perfect for work.", rating: 4 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    ],
   },
   {
     id: "2",
@@ -19,7 +44,32 @@ const allProducts = [
     description: "Latest smartphone with advanced features.",
     price: 899,
     image:
-      "https://images.unsplash.com/photo-1510166089176-b57564a542b1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c21hcnRwaG9uZSUyMHh8ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1510166089176-b57564a542b1?w=600&auto=format&fit=crop&q=60",
+    category: "Smartphones",
+    brand: "PhoneMax",
+    stock: 50,
+    rating: 4.5,
+    features: [
+      "6.5-inch OLED Display",
+      "Triple Camera 48MP",
+      "5G Connectivity",
+      "Fast Charging",
+    ],
+    specs: {
+      processor: "Snapdragon 888",
+      ram: "8GB",
+      storage: "256GB",
+      camera: "48MP + 12MP + 8MP",
+      battery: "4500mAh",
+    },
+    reviews: [
+      { user: "Sara", comment: "Excellent display quality!", rating: 5 },
+      { user: "Omar", comment: "Battery drains quickly.", rating: 3 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1510557880182-3f8c5f7b8d3b",
+      "https://images.unsplash.com/photo-1601944177325-f88676528384",
+    ],
   },
   {
     id: "3",
@@ -28,6 +78,30 @@ const allProducts = [
     price: 250,
     image:
       "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=500&q=80",
+    category: "Accessories",
+    brand: "SoundMax",
+    stock: 100,
+    rating: 4.6,
+    features: [
+      "Noise Cancellation",
+      "Bluetooth 5.0",
+      "40 Hours Battery",
+      "Comfort Fit",
+    ],
+    specs: {
+      type: "Over-Ear",
+      connectivity: "Bluetooth 5.0",
+      battery: "40 Hours",
+      weight: "250g",
+    },
+    reviews: [
+      { user: "Yusuf", comment: "Best headphones I’ve used.", rating: 5 },
+      { user: "Aisha", comment: "Comfortable for long use.", rating: 4 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1511367461989-f85a21fda167",
+      "https://images.unsplash.com/photo-1585386959984-a415522b6fa3",
+    ],
   },
   {
     id: "4",
@@ -36,6 +110,25 @@ const allProducts = [
     price: 299,
     image:
       "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80",
+    category: "Wearables",
+    brand: "TimeTech",
+    stock: 80,
+    rating: 4.3,
+    features: ["Heart Rate Monitor", "GPS Tracking", "Water Resistant", "NFC"],
+    specs: {
+      display: "1.5-inch AMOLED",
+      battery: "5 days",
+      connectivity: "Bluetooth 5.1",
+      weight: "45g",
+    },
+    reviews: [
+      { user: "Karim", comment: "Great for fitness tracking.", rating: 4 },
+      { user: "Layla", comment: "Sleek and stylish.", rating: 5 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+      "https://images.unsplash.com/photo-1579586337278-3befd40fd17a",
+    ],
   },
   {
     id: "5",
@@ -43,7 +136,26 @@ const allProducts = [
     description: "Precision RGB gaming mouse for pro gamers.",
     price: 75,
     image:
-      "https://images.unsplash.com/photo-1628832307345-7404b47f1751?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8R2FtaW5nJTIwTW91c2V8ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1628832307345-7404b47f1751?w=600&auto=format&fit=crop&q=60",
+    category: "Accessories",
+    brand: "ProGamer",
+    stock: 200,
+    rating: 4.4,
+    features: ["RGB Lighting", "High DPI Sensor", "Programmable Buttons"],
+    specs: {
+      type: "Wired",
+      dpi: "16000",
+      buttons: "7",
+      weight: "100g",
+    },
+    reviews: [
+      { user: "Hassan", comment: "Perfect for FPS games.", rating: 5 },
+      { user: "Nour", comment: "RGB is awesome!", rating: 4 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1628832307345-7404b47f1751",
+      "https://images.unsplash.com/photo-1587202372775-98983f5cb1bb",
+    ],
   },
   {
     id: "6",
@@ -51,7 +163,26 @@ const allProducts = [
     description: "RGB backlit mechanical keyboard with tactile feedback.",
     price: 120,
     image:
-      "https://images.unsplash.com/photo-1618586810102-aaa7049200c0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8TWVjaGFuaWNhbCUyMEtleWJvYXJkfGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1618586810102-aaa7049200c0?w=600&auto=format&fit=crop&q=60",
+    category: "Accessories",
+    brand: "KeyMaster",
+    stock: 120,
+    rating: 4.5,
+    features: ["Mechanical Switches", "RGB Backlight", "Ergonomic Design"],
+    specs: {
+      type: "Mechanical",
+      connectivity: "Wired USB",
+      switch: "Cherry MX Blue",
+      weight: "900g",
+    },
+    reviews: [
+      { user: "Bilal", comment: "Typing feels amazing.", rating: 5 },
+      { user: "Ola", comment: "A bit loud, but great quality.", rating: 4 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1618586810102-aaa7049200c0",
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+    ],
   },
   {
     id: "7",
@@ -60,6 +191,25 @@ const allProducts = [
     price: 450,
     image:
       "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=500&q=80",
+    category: "Monitors",
+    brand: "ViewMax",
+    stock: 60,
+    rating: 4.6,
+    features: ["4K UHD", "144Hz Refresh Rate", "IPS Panel"],
+    specs: {
+      size: "27-inch",
+      resolution: "3840x2160",
+      refreshRate: "144Hz",
+      ports: "HDMI, DisplayPort",
+    },
+    reviews: [
+      { user: "Sami", comment: "Colors are vibrant.", rating: 5 },
+      { user: "Mariam", comment: "Perfect for gaming.", rating: 4 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1593642632823-8f785ba67e45",
+      "https://images.unsplash.com/photo-1585386959984-a415522b6fa3",
+    ],
   },
   {
     id: "8",
@@ -67,93 +217,267 @@ const allProducts = [
     description: "Portable speaker with deep bass and long battery life.",
     price: 99,
     image:
-      "https://images.unsplash.com/photo-1598034989845-48532781987e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEJsdWV0b290aCUyMFNwZWFrZXJ8ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1598034989845-48532781987e?w=600&auto=format&fit=crop&q=60",
+    category: "Audio",
+    brand: "SoundWave",
+    stock: 150,
+    rating: 4.2,
+    features: ["Portable", "Deep Bass", "12 Hours Playtime"],
+    specs: {
+      connectivity: "Bluetooth 5.0",
+      battery: "12 Hours",
+      weight: "500g",
+    },
+    reviews: [
+      { user: "Ahmed", comment: "Bass is amazing!", rating: 5 },
+      { user: "Salma", comment: "Battery lasts long.", rating: 4 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1598034989845-48532781987e",
+      "https://images.unsplash.com/photo-1615392772395-f1864b84c4c2",
+    ],
   },
   {
     id: "9",
-    name: "Drone Pro",
-    description: "High-end drone with 4K camera and GPS stabilization.",
-    price: 899,
+    name: "Drone 4K",
+    description: "High-quality drone with 4K camera for aerial photography.",
+    price: 799,
     image:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1508614589041-895b88991e3c?w=600&auto=format&fit=crop&q=60",
+    category: "Drones",
+    brand: "SkyView",
+    stock: 30,
+    rating: 4.6,
+    features: [
+      "4K Camera",
+      "GPS Auto Return",
+      "30 min Flight Time",
+      "Stabilization Gimbal",
+    ],
+    specs: {
+      camera: "4K UHD",
+      flightTime: "30 minutes",
+      range: "5km",
+      battery: "4500mAh",
+    },
+    reviews: [
+      { user: "Imran", comment: "Amazing for aerial shots.", rating: 5 },
+      { user: "Lina", comment: "Battery could be better.", rating: 4 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1508614589041-895b88991e3c",
+      "https://images.unsplash.com/photo-1508615070457-7baeba4003a0",
+    ],
   },
   {
     id: "10",
     name: "Fitness Tracker",
-    description: "Track your steps, heart rate, and sleep patterns.",
-    price: 149,
+    description: "Track steps, sleep, and workouts with ease.",
+    price: 150,
     image:
-      "https://images.unsplash.com/photo-1585386959984-a415522b6fa3?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1598971639058-3f7b7e0f6b8b?w=600&auto=format&fit=crop&q=60",
+    category: "Wearables",
+    brand: "FitLife",
+    stock: 200,
+    rating: 4.3,
+    features: ["Step Counter", "Heart Rate Monitor", "Water Resistant"],
+    specs: {
+      display: "OLED",
+      battery: "7 Days",
+      connectivity: "Bluetooth 5.0",
+      weight: "35g",
+    },
+    reviews: [
+      { user: "Nadia", comment: "Keeps me motivated daily!", rating: 5 },
+      { user: "Khalid", comment: "Accurate tracking.", rating: 4 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1598971639058-3f7b7e0f6b8b",
+      "https://images.unsplash.com/photo-1557434440-8db1cb0c9b6b",
+    ],
   },
   {
     id: "11",
     name: "Tablet Pro",
-    description: "Lightweight tablet with a high-resolution display.",
-    price: 699,
+    description: "Lightweight tablet with powerful performance.",
+    price: 650,
     image:
-      "https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=60",
+    category: "Tablets",
+    brand: "TabMax",
+    stock: 70,
+    rating: 4.5,
+    features: ["12-inch Retina Display", "Stylus Support", "Fast Charging"],
+    specs: {
+      processor: "A14 Bionic",
+      ram: "6GB",
+      storage: "256GB",
+      battery: "12 Hours",
+    },
+    reviews: [
+      { user: "Omar", comment: "Perfect for drawing and notes.", rating: 5 },
+      { user: "Huda", comment: "Very lightweight.", rating: 4 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+      "https://images.unsplash.com/photo-1611078489935-76e95d85f1e5",
+    ],
   },
   {
     id: "12",
     name: "Smart Home Hub",
-    description: "Control your smart devices with a single hub.",
-    price: 199,
+    description: "Control all your smart devices with one hub.",
+    price: 180,
     image:
-      "https://images.unsplash.com/photo-1581291519195-ef11498d1cf0?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1581091870686-3b5de0f3d0a4?w=600&auto=format&fit=crop&q=60",
+    category: "Smart Home",
+    brand: "HomeEase",
+    stock: 110,
+    rating: 4.4,
+    features: ["Voice Assistant", "Smart Device Control", "Wi-Fi & Bluetooth"],
+    specs: {
+      connectivity: "Wi-Fi + Bluetooth",
+      voiceAssistant: "Yes",
+      weight: "250g",
+    },
+    reviews: [
+      { user: "Yara", comment: "Controls my entire home.", rating: 5 },
+      { user: "Hassan", comment: "Sometimes lags with Wi-Fi.", rating: 3 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1581091870686-3b5de0f3d0a4",
+      "https://images.unsplash.com/photo-1616444796964-d1e6f9e8bb5c",
+    ],
   },
   {
     id: "13",
     name: "VR Headset",
-    description: "Immersive virtual reality headset for gaming and media.",
-    price: 399,
+    description: "Immersive VR experience for gaming and media.",
+    price: 499,
     image:
-      "https://images.unsplash.com/photo-1590608897129-79d6e1b01c34?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1628277315209-c3f3d39ac49e?w=600&auto=format&fit=crop&q=60",
+    category: "VR",
+    brand: "ImmersiTech",
+    stock: 40,
+    rating: 4.7,
+    features: ["6DOF Tracking", "High-Res Display", "Wireless"],
+    specs: {
+      resolution: "2160x1200",
+      refreshRate: "90Hz",
+      weight: "470g",
+    },
+    reviews: [
+      { user: "Ali", comment: "Mind-blowing VR games!", rating: 5 },
+      { user: "Fatima", comment: "Setup was easy.", rating: 4 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1628277315209-c3f3d39ac49e",
+      "https://images.unsplash.com/photo-1606813902915-10b8b6d4ef3f",
+    ],
   },
   {
     id: "14",
-    name: "External SSD",
-    description: "Fast portable storage drive with 1TB capacity.",
-    price: 179,
+    name: "SSD 1TB",
+    description: "Ultra-fast SSD for quick boot and load times.",
+    price: 150,
     image:
-      "https://images.unsplash.com/photo-1614821814342-f3fdd91de3b0?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1587202372775-98983f5cb1bb?w=600&auto=format&fit=crop&q=60",
+    category: "Storage",
+    brand: "SpeedDrive",
+    stock: 300,
+    rating: 4.8,
+    features: ["1TB Storage", "Fast Read/Write", "Durable Build"],
+    specs: {
+      type: "NVMe",
+      capacity: "1TB",
+      readSpeed: "3500MB/s",
+      writeSpeed: "3000MB/s",
+    },
+    reviews: [
+      { user: "Samir", comment: "Boots Windows in seconds.", rating: 5 },
+      { user: "Aya", comment: "Super reliable.", rating: 5 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1587202372775-98983f5cb1bb",
+      "https://images.unsplash.com/photo-1627083751288-cdf22fcb6d92",
+    ],
   },
   {
     id: "15",
     name: "Action Camera",
-    description: "Compact camera for capturing adventures in 4K.",
-    price: 299,
+    description: "Capture adventures in stunning 4K.",
+    price: 300,
     image:
-      "https://images.unsplash.com/photo-1581978584894-fd5f230e07cd?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600&auto=format&fit=crop&q=60",
+    category: "Cameras",
+    brand: "AdventureCam",
+    stock: 90,
+    rating: 4.5,
+    features: ["4K Recording", "Waterproof", "Image Stabilization"],
+    specs: {
+      resolution: "4K",
+      waterproof: "Yes (up to 30m)",
+      battery: "2 Hours",
+    },
+    reviews: [
+      { user: "Othman", comment: "Great for diving trips.", rating: 5 },
+      { user: "Hiba", comment: "Video quality is amazing.", rating: 4 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
+      "https://images.unsplash.com/photo-1602848597222-7e7fa05afd32",
+    ],
   },
   {
     id: "16",
-    name: "Noise-Cancelling Earbuds",
-    description: "Wireless earbuds with active noise cancellation.",
-    price: 199,
+    name: "Wireless Earbuds",
+    description: "Compact earbuds with crystal-clear sound.",
+    price: 120,
     image:
-      "https://images.unsplash.com/photo-1615392772395-f1864b84c4c2?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1606813902915-10b8b6d4ef3f?w=600&auto=format&fit=crop&q=60",
+    category: "Audio",
+    brand: "SoundBeats",
+    stock: 180,
+    rating: 4.4,
+    features: ["Noise Cancellation", "Touch Controls", "20 Hours Battery"],
+    specs: {
+      connectivity: "Bluetooth 5.2",
+      battery: "20 Hours",
+      waterproof: "IPX5",
+    },
+    reviews: [
+      { user: "Amira", comment: "Best sound for the price.", rating: 5 },
+      { user: "Tariq", comment: "Fits comfortably.", rating: 4 },
+    ],
+    images: [
+      "https://images.unsplash.com/photo-1606813902915-10b8b6d4ef3f",
+      "https://images.unsplash.com/photo-1605456502085-6cc5d72a43ce",
+    ],
   },
 ];
 
+
 export default function Products() {
-  const [visibleCount, setVisibleCount] = useState(4); // Number of products visible initially
+  const [visibleCount, setVisibleCount] = useState(8); // Number of products visible initially
 
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + 4); // Load 4 more products
   };
 
   const handleLessMore = () => {
-    setVisibleCount((prev) => Math.max(prev - 4, 4)); // Show less products but keep at least 4 visible
+    setVisibleCount((prev) => Math.max(prev - 4, 8)); // Show less products but keep at least 4 visible
   };
 
   const visibleProducts = allProducts.slice(0, visibleCount);
 
   return (
-    <section className="py-16 bg-gray-900 text-gray-100 min-h-screen">
+    <section className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-100 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         {/* Page Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white">All Products</h1>
+          <h1 className="text-4xl font-bold text-white">
+            All Products <span className="text-xl">({allProducts.length})</span>{" "}
+          </h1>
           <p className="text-gray-400 mt-2">
             Browse through our complete collection of products.
           </p>
@@ -204,7 +528,7 @@ export default function Products() {
               Show More
             </button>
           )}
-          {visibleCount > 4 && (
+          {visibleCount > 8 && (
             <button
               onClick={handleLessMore}
               className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
