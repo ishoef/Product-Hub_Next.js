@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛍️ Next.js 15 Product Management App  
 
-## Getting Started
+A simple **Next.js 15 (App Router)** application with **NextAuth.js authentication**, featuring public and protected pages. Users can browse products, view details, and (after logging in) add new products via a protected dashboard.  
 
-First, run the development server:
+---
 
+## 🚀 Features  
+
+### Public Pages  
+- **Landing Page (/**)  
+  - Includes Navbar, Hero, Product Highlights, and Footer  
+  - Navigation links to Login and Products  
+
+- **Login (/login)**  
+  - Authentication with **NextAuth.js** (Google or Credentials)  
+  - Redirects to `/products` after successful login  
+
+- **Products List (/products)**  
+  - Fetch and display product list from mock backend  
+  - Each product shows: name, description, price, and details button  
+
+- **Product Details (/products/[id])**  
+  - Public details page for each product  
+
+### Protected Pages  
+- **Add Product (/dashboard/add-product)**  
+  - Only accessible when logged in  
+  - Form to add a new product (stored in database or API route)  
+  - Redirects unauthenticated users to `/login`  
+
+---
+
+## ✨ Optional Enhancements  
+- Loading spinner when submitting forms  
+- Toast messages on successful product add  
+- Light/Dark mode toggle  
+
+---
+
+## 🛠️ Tech Stack  
+- [Next.js 15 (App Router)](https://nextjs.org/)  
+- [NextAuth.js](https://next-auth.js.org/) for authentication  
+- Route Handlers (`/api`) for backend  
+- Mock database (JSON/file-based) or Express server  
+
+---
+
+## 📂 Routes Summary  
+
+| Route | Type | Description |
+|-------|------|-------------|
+| `/` | Public | Landing Page with Hero + Product Highlights |
+| `/login` | Public | Login with NextAuth (Google / Credentials) |
+| `/products` | Public | Product List |
+| `/products/[id]` | Public | Product Details |
+| `/dashboard/add-product` | Protected | Add Product (requires login) |
+
+---
+
+## ⚡ Getting Started  
+
+### 🔹 Clone the repository  
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone https://github.com/your-username/nextjs-product-app.git
+cd nextjs-product-app
