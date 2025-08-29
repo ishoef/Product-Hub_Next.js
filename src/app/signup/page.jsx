@@ -73,7 +73,7 @@ export default function SignUp() {
 
           <button
             type="submit"
-            className="w-full py-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-lg shadow-lg transition-colors"
+            className="cursor-pointer w-full py-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-lg shadow-lg transition-colors"
           >
             Sign Up
           </button>
@@ -86,17 +86,20 @@ export default function SignUp() {
         </div>
 
         <div className="flex gap-4">
-          <button className="flex-1 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg shadow-lg transition-colors">
+          <button className="cursor-pointer flex-1 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg shadow-lg transition-colors">
             Google
           </button>
-          <button className="flex-1 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg transition-colors">
+          <button className="cursor-pointer flex-1 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg transition-colors">
             Facebook
           </button>
         </div>
 
         <p className="mt-6 text-center text-gray-300 text-sm">
           Already have an account?{" "}
-          <a href="/login" className="text-purple-400 hover:underline">
+          <a
+            href="/login"
+            className="cursor-pointer text-purple-400 hover:underline"
+          >
             Login
           </a>
         </p>
