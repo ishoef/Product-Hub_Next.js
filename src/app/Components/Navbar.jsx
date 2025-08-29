@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="w-full bg-gray-900 shadow-md">
+    <header className="w-full fixed top-0 z-50 bg-gray-900 shadow-md">
       <nav className="flex justify-between items-center max-w-7xl mx-auto px-6 py-4 text-white">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold tracking-wide">
@@ -28,6 +28,15 @@ export default function Navbar() {
               className="hover:text-blue-400 transition-colors duration-200"
             >
               Products
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/dashboard/addproduct"
+              className="hover:text-blue-400 transition-colors duration-200"
+            >
+              Add Product
             </Link>
           </li>
         </ul>

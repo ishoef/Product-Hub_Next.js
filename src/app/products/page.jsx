@@ -456,7 +456,6 @@ const allProducts = [
   },
 ];
 
-
 export default function Products() {
   const [visibleCount, setVisibleCount] = useState(8); // Number of products visible initially
 

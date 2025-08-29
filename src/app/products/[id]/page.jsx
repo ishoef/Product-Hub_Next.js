@@ -5,8 +5,18 @@ import { useParams } from "next/navigation";
 import { Star } from "lucide-react";
 import { MdKeyboardBackspace } from "react-icons/md";
 
+// export const async getProductsDetails = (product_id) => {
+//   const res = await fetch();
+//   const data = res.json();
+//   return data;
+// }
+
 export default function Details() {
   const { id } = useParams();
+
+  // Get the product data
+  // const singleProduct = await getProductsDetails(id);
+
   const allProducts = [
     {
       id: "1",
@@ -482,7 +492,7 @@ export default function Details() {
     <section className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-100">
       <div className="max-w-5xl mx-auto mb-5 text-blue-300 hover:text-blue-400 ">
         <p
-          className="flex items-center gap-2 cursor-pointer"
+          className="w-fit flex items-center gap-2 cursor-pointer"
           onClick={() => window.history.back()}
         >
           <MdKeyboardBackspace />
